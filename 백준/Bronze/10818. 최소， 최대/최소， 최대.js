@@ -7,9 +7,9 @@ const input = fs
   .split("\n")
   .map((el) => el.split(" "));
 
-const N = input[1].map(Number);
+const N = input[1];
 
-const min = Math.min.apply(null, N);
-const max = Math.max.apply(null, N);
+const min = Math.min(...N);
+const max = Math.max(...N);
 
 console.log(`${min} ${max}`);
