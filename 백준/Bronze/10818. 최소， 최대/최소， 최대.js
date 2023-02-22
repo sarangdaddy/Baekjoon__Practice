@@ -7,18 +7,9 @@ const input = fs
   .split("\n")
   .map((el) => el.split(" "));
 
-const N = input[1];
+const N = input[1].map(Number);
 
-const answer = N.map(Number).reduce(
-  (acc, cur) => {
-    if (cur < acc[0]) {
-      acc[0] = cur;
-    } else if (cur > acc[1]) {
-      acc[1] = cur;
-    }
-    return acc;
-  },
-  [N[0], N[0]]
-);
+const min = Math.min.apply(null, N);
+const max = Math.max.apply(null, N);
 
-console.log(answer.join(" "));
+console.log(`${min} ${max}`);
