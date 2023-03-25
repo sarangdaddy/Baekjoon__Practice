@@ -1,13 +1,7 @@
 function solution(n, m) {
   var answer = [];
 
-  if (n > m) {
-    A = n;
-    B = m;
-  } else {
-    A = m;
-    B = n;
-  }
+  n > m ? ((A = n), (B = m)) : ((A = m), (B = n));
 
   let remainder = 0;
 
@@ -22,3 +16,5 @@ function solution(n, m) {
 
   return answer;
 }
+
+console.log(solution(2, 5));
