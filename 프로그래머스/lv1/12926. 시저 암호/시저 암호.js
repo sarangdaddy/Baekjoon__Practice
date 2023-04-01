@@ -3,7 +3,6 @@ function solution(s, n) {
 
   for (let i = 0; i < s.length; i++) {
     let ascCode = s[i].charCodeAt();
-    console.log(ascCode);
 
     if (ascCode === 32) answer += s[i];
 
