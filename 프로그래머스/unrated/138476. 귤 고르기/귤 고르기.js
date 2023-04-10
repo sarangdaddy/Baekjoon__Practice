@@ -11,7 +11,7 @@ function solution(k, tangerine) {
   // 개수가 가장 많은 종류 부터 포장한다.
   const numOfPackage = [...whatKind].sort((a, b) => b[1] - a[1]);
 
-  //총 k 만큼 포장이 가능하다.
+  // 포장 개수 k가 0보다 크면 계속 포장한다.
   numOfPackage.forEach((kindAndNumber) => {
     if (k > 0) {
       k -= kindAndNumber[1];
@@ -21,3 +21,5 @@ function solution(k, tangerine) {
 
   return answer;
 }
+
+console.log(solution(6, [1, 1, 1, 1, 1, 2, 2]));
